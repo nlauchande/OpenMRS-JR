@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xf="http://www.w3.org/2002/xforms" xmlns:fn="http://www.w3.org/2005/xpath-functions"
+	xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jr="http://openrosa.org/javarosa" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>jr-patient-single-reg</title>
+		<xf:model>
+			<xf:instance>
+				<patient name="Patient" id="0" formKey="">
+					<enterer />
+					<family_name />
+					<middle_name />
+					<given_name />
+					<birth_date />
+					<identifier />
+					<patient_identifier_type_id />
+					<gender />
+					<location_id />
+				</patient>
+			</xf:instance>
+			<xf:bind id="family_name" nodeset="/patient/family_name"
+				type="xsd:string" required="true()" />
+			<xf:bind id="middle_name" nodeset="/patient/middle_name"
+				type="xsd:string" />
+			<xf:bind id="given_name" nodeset="/patient/given_name" type="xsd:string" />
+			<xf:bind id="birth_date" nodeset="/patient/birth_date" type="xsd:date" />
+			<xf:bind id="identifier" nodeset="/patient/identifier" type="xsd:string"
+				required="true()" />
+			<xf:bind id="patient_identifier_type_id" nodeset="/patient/patient_identifier_type_id"
+				type="xsd:string" required="true()" />
+			<xf:bind id="gender" nodeset="/patient/gender" type="xsd:string" />
+			<xf:bind id="location_id" nodeset="/patient/location_id"
+				type="xsd:string" required="true()" />
+		</xf:model>
+	</head>
+	<body>
+		<xf:group id="1">
+			<xf:label>Page1</xf:label>
+			<xf:input bind="family_name">
+				<xf:label>Family Name</xf:label>
+				<xf:hint>The patient family name</xf:hint>
+			</xf:input>
+			<xf:input bind="middle_name">
+				<xf:label>Middle Name</xf:label>
+				<xf:hint>The patient middle name</xf:hint>
+			</xf:input>
+			<xf:input bind="given_name">
+				<xf:label>Given Name</xf:label>
+				<xf:hint>The patient given name</xf:hint>
+			</xf:input>
+			<xf:input bind="birth_date">
+				<xf:label>Birth Date</xf:label>
+				<xf:hint>The patient birth date</xf:hint>
+			</xf:input>
+			<xf:input bind="identifier">
+				<xf:label>Identifier</xf:label>
+				<xf:hint>The patient identifier</xf:hint>
+			</xf:input>
+			<xf:select1 bind="patient_identifier_type_id">
+				<xf:label>Identifier Type</xf:label>
+				<xf:hint>The patient's identifier type</xf:hint>
+				<xf:item id="2">
+					<xf:label>Old Identification Number</xf:label>
+					<xf:value>2</xf:value>
+				</xf:item>
+				<xf:item id="1">
+					<xf:label>OpenMRS Identification Number</xf:label>
+					<xf:value>1</xf:value>
+				</xf:item>
+			</xf:select1>
+			<xf:select1 bind="gender">
+				<xf:label>Gender</xf:label>
+				<xf:hint>The patient's sex</xf:hint>
+				<xf:item id="M">
+					<xf:label>Male</xf:label>
+					<xf:value>M</xf:value>
+				</xf:item>
+				<xf:item id="F">
+					<xf:label>Female</xf:label>
+					<xf:value>F</xf:value>
+				</xf:item>
+			</xf:select1>
+			<xf:select1 bind="location_id">
+				<xf:label>Location</xf:label>
+				<xf:hint>The patient's location</xf:hint>
+				<xf:item id="1">
+					<xf:label>Unknown Location</xf:label>
+					<xf:value>1</xf:value>
+				</xf:item>
+			</xf:select1>
+		</xf:group>
+	</body>
+</html>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>OpenMRS-JR</name>
+	<comment></comment>
+	<projects>
+		<project>j2me-build</project>
+		<project>j2me-communication</project>
+		<project>j2me-core</project>
+		<project>j2me-entity-select</project>
+		<project>j2me-form-entry</project>
+		<project>j2me-javarosa</project>
+		<project>j2me-location</project>
+		<project>j2me-media</project>
+		<project>j2me-properties</project>
+		<project>j2me-shared-resources</project>
+		<project>javarosa-core</project>
+		<project>javarosa-libs</project>
+		<project>org.javarosa.cases</project>
+		<project>org.javarosa.chsreferral</project>
+		<project>org.javarosa.log</project>
+		<project>org.javarosa.patient</project>
+		<project>org.javarosa.patient.entry</project>
+		<project>org.javarosa.polish.activity</project>
+		<project>org.javarosa.rmstest</project>
+		<project>org.javarosa.user</project>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>eclipseme.core.preverifier</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+		<nature>eclipseme.core.nature</nature>
+	</natures>
+</projectDescription>
